@@ -4,16 +4,20 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
     <style>
+        .border-5{
+            border-style:solid;
+            border-width: 5px;
+        }
         .nav-color{
             background:white;}
         @media (max-width:600px){
         .nav-color{background:#17a2b8;}
             }
-        }
     </style>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <title>Weather Dashboard</title>
 </head>
 <body class = "bg-light">
@@ -46,30 +50,22 @@
     </nav>
     <div class="container">
         <div class = "row bg-white mt-5">
-            <div class = "col-lg-8 border-right p-5">
-                <h1 class= "text-info">Summary: Latitude vs. X</h1>
-                <img src="Resources/Lat_Temp_Plot.png" alt="temperature vs latitude" width = "30%" class="img-fluid float-left">
-                <p> 
-                    This project examines the relationship between weather and a location's proximity to the equator. 
-                    We pulled data from the OpenWeatherMap API and randomly sampled cities from around the world. 
-                    We ensured our dataset had at least 500 cities. 
-                </p>
-                <p>
-                    We used Matplotlib to analyze different variables of weather vs. latitude to see if any trends arose. 
-                    The variables we examined were temperature, wind speed, humidity and cloudiness. Included in this 
-                    site is the source data, along with curated visualizations from the analysis.
-                </p>
+            <div class = "col-lg-8 border-right border-bottom p-5">
+                <h1 class= "text-info">Humidity</h1>
+                <img src="Resources/Lat_Humidity_Plot.png" alt="humidity vs latitude" width="80%" class="img-fluid mx-auto d-block"> <br>
+                <p> The majority of cities had a humidity above 40%, 
+                    but there is no relationship between humidity and latitude.
                 </div>
-                <div class = "col-lg-4 text-info p-5">
+                <div class = "col-lg-4 text-info border-bottom p-5">
                     <h1>Visualizations</h1>
                     <div class = "row pt-5">
-                        <div class = "col">
-                            <a href="cloudiness.html" title=""><img src="Resources/Lat_Cloudiness_Plot.png" class="img-fluid"></a>
-                            <a href="humidity.html" title=""><img src="Resources/Lat_Humidity_Plot.png" class="img-fluid"></a>
+                        <div class = "col px-0 pt-5">
+                            <a href="cloudiness.html" title=""><img src="Resources/Lat_Cloudiness_Plot.png" alt="cloudiness vs latitude" class="img-fluid"></a>
+                            <a href="humidity.html" title=""><img src="Resources/Lat_Humidity_Plot.png" alt="humidity vs latitude" class="img-fluid border-5 border-info"></a>
                         </div>
-                        <div class = "col">
-                            <a href="max_temp.html" title=""><img src="Resources/Lat_Temp_Plot.png" class="img-fluid"></a>
-                            <a href="windspeed.html" title=""><img src="Resources/Lat_Wind_Plot.png" class="img-fluid"></a>
+                        <div class = "col px-0 pt-5">
+                            <a href="max_temp.html" title=""><img src="Resources/Lat_Temp_Plot.png" alt="temperature vs latitude" class="img-fluid"></a>
+                            <a href="windspeed.html" title=""><img src="Resources/Lat_Wind_Plot.png" alt="wind vs latitude" class="img-fluid"></a>
                         </div>
                     </div>
                 </div>
